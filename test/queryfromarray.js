@@ -1,6 +1,5 @@
 const assert = require('assert');
-const FJS = require('../src/flyjsonstream');
-const path = require('path');
+const DB = require('../src/flyjsondb');
 
 describe('Query from array test', function() {
 
@@ -19,7 +18,7 @@ describe('Query from array test', function() {
     ]
 
     it('read array', function(done) {
-        var nosql = new FJS();
+        var nosql = new DB();
         nosql.loadArray(data1,function(err,data) {
             if(err) return console.log(err);
             assert.deepEqual(nosql.odm.exec(),[ { user_id: 1, name: 'budi', age: 10 },
@@ -30,7 +29,7 @@ describe('Query from array test', function() {
     });
 
     it('read array promise way', function(done) {
-        var nosql = new FJS();
+        var nosql = new DB();
         nosql.loadArray(data1).then(data => {
             assert.deepEqual(nosql.odm.exec(),[ { user_id: 1, name: 'budi', age: 10 },
             { user_id: 5, name: 'wawan', age: 20 },
@@ -40,7 +39,7 @@ describe('Query from array test', function() {
     });
 
     it('read array + join merge', function(done) {
-        var nosql = new FJS();
+        var nosql = new DB();
         nosql.loadArray(data1,function(err,data) {
             if(err) return console.log(err);
             nosql.joinArray(data2,'profile',function(err,data) {
@@ -54,7 +53,7 @@ describe('Query from array test', function() {
     });
 
     it('read array + join merge promise way', function(done) {
-        var nosql = new FJS();
+        var nosql = new DB();
         nosql.loadArray(data1).then(data => {
             nosql.joinArray(data2,'profile').then(data => {
                 var result = nosql.odm.merge('user_id','id').exec();

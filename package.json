@@ -1,8 +1,8 @@
 {
   "name": "fly-json-db",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "NoSQL Embedded Database on top json and stream for NodeJS",
-  "main": "src/flyjsonstream.js",
+  "main": "src/flyjsondb.js",
   "directories": {
     "test": "test"
   },

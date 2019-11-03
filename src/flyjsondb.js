@@ -3,7 +3,7 @@ const es = require('event-stream');
 const jsonStream = require('JSONStream');
 const fs = require('fs');
 
-class FlyJsonStream {
+class FlyJsonDb {
 
     constructor() {
         this._odm = new FlyJsonOdm();
@@ -235,4 +235,4 @@ class FlyJsonStream {
     }
 }
 
-module.exports = FlyJsonStream;
+module.exports = FlyJsonDb;
