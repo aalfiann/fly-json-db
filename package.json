@@ -1,6 +1,6 @@
 {
   "name": "fly-json-db",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "NoSQL Embedded Database on top json and stream for NodeJS",
   "main": "src/flyjsonstream.js",
   "directories": {
@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/aalfiann/fly-json-stream.git"
+    "url": "git+https://github.com/aalfiann/fly-json-db.git"
   },
   "keywords": [
     "json-db",
@@ -23,9 +23,9 @@
   "author": "M ABD AZIZ ALFIAN",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/aalfiann/fly-json-stream/issues"
+    "url": "https://github.com/aalfiann/fly-json-db/issues"
   },
-  "homepage": "https://github.com/aalfiann/fly-json-stream#readme",
+  "homepage": "https://github.com/aalfiann/fly-json-db#readme",
   "devDependencies": {
     "coveralls": "^3.0.7",
     "mocha": "^6.2.2",
